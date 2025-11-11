@@ -1,12 +1,10 @@
-import FalconFrame from "@wxn0brp/falcon-frame";
 import { FF_VQL } from "@wxn0brp/vql";
 import { VQL } from "./api";
-
-const app = new FalconFrame();
+import { app, oneWindow } from "@wxn0brp/zhiva-base-lib/server";
 
 app.static("public");
 app.static("dist");
 
 FF_VQL(app, VQL);
 
-app.l(16586);
+oneWindow();

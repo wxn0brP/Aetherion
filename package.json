@@ -23,6 +23,7 @@
         "@wxn0brp/vql-client": "^0.2.2"
     },
     "devDependencies": {
+        "@wxn0brp/zhiva-base-lib": "github:wxn0brP/Zhiva-base-lib",
         "esbuild": "*",
         "esbuild-style-plugin": "*",
         "sass": "*",

@@ -1,0 +1,10 @@
+{
+    "cmd": "yarn start",
+    "watch": [
+        "src/server"
+    ],
+    "restart_cmd": "clear",
+    "events": {
+        "rs": "clear"
+    }
+}

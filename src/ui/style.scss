@@ -1,0 +1,24 @@
+:root {
+    --back: #0e0d0d;
+    --txt: #fff;
+    --accent: #9314dc;
+    --accentRGB: 147, 20, 220;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--back);
+    color: var(--txt);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}

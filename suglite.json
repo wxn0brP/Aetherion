@@ -1,0 +1,13 @@
+{
+    "cmd": "yarn build",
+    "watch": [
+        "src"
+    ],
+    "ignore": [
+        "src/server"
+    ],
+    "restart_cmd": "clear",
+    "events": {
+        "rs": "clear"
+    }
+}

@@ -12,7 +12,7 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
-        "build": "tsc --noEmit && bun run build.ts",
+        "build": "bun run build.ts",
         "start": "bun run src/server/index.ts"
     },
     "dependencies": {

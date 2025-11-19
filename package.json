@@ -20,14 +20,14 @@
         "@wxn0brp/falcon-frame": "^0.5.3",
         "@wxn0brp/flanker-ui": "^0.4.3",
         "@wxn0brp/vql": "^0.8.3",
-        "@wxn0brp/vql-client": "^0.2.2",
-        "esbuild": "*",
-        "esbuild-style-plugin": "*",
-        "sass": "*"
+        "@wxn0brp/vql-client": "^0.2.2"
     },
     "devDependencies": {
         "@wxn0brp/zhiva-base-lib": "github:wxn0brP/Zhiva-base-lib",
-        "typescript": "*"
+        "typescript": "*",
+        "esbuild": "*",
+        "esbuild-style-plugin": "*",
+        "sass": "*"
     },
     "files": [
         "dist"

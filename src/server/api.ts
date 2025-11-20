@@ -1,4 +1,6 @@
 import { createValtheraAdapter } from "@wxn0brp/vql";
+import * as fs from "fs";
+import { homedir } from "os";
 import { startupLogs } from "./log";
 
 export const VqlApi = createValtheraAdapter({
@@ -6,20 +8,19 @@ export const VqlApi = createValtheraAdapter({
         try {
             switch (collection) {
                 case "startup-logs": return startupLogs;
-                default:
+                case "list-files": return fs.readdirSync(search.path, { withFileTypes: true }).map(f => ({ name: f.name, d: f.isDirectory() }));
             }
-        } finally { }
+        } catch { }
         return [];
     },
 
     async findOne(collection, search, context, findOpts) {
         try {
-
-
-            throw new Error("Unknown collection");
-        } catch {
-            return null;
-        }
+            switch (collection) {
+                case "home": return homedir();
+            }
+        } catch { }
+        return null;
     }
 }, true);
 

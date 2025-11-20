@@ -1,5 +1,5 @@
 {
-    "cmd": "yarn start",
+    "cmd": "NO_ZHIVA=true ZHIVA_PORT=11295 bun run src/server/index.js",
     "watch": [
         "src/server"
     ],

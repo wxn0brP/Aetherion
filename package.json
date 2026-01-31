@@ -17,10 +17,10 @@
     },
     "dependencies": {
         "@wxn0brp/db-core": "^0.4.0",
-        "@wxn0brp/falcon-frame": "^0.6.1",
+        "@wxn0brp/falcon-frame": "^0.7.0",
         "@wxn0brp/flanker-ui": "^0.5.1",
-        "@wxn0brp/vql": "^0.10.2",
-        "@wxn0brp/vql-client": "^0.2.7"
+        "@wxn0brp/vql": "^0.10.4",
+        "@wxn0brp/vql-client": "^0.2.8"
     },
     "devDependencies": {
         "@wxn0brp/zhiva-base-lib": "github:wxn0brP/Zhiva-base-lib",

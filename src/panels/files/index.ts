@@ -1,7 +1,7 @@
 import { fetchVQL } from "@wxn0brp/vql-client";
 import "./style.scss";
 
-const panel = qs(".filesPanel");
+const panel = qs("#filesPanel");
 const home = await fetchVQL("api home!");
 let currentPath = home;
 

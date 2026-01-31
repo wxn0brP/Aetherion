@@ -1,0 +1,29 @@
+#keyboardPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .row {
+        display: flex;
+        gap: 5px;
+        height: calc(100% / 6);
+
+        div {
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 2px;
+            border: 2px solid var(--txt);
+            height: 100%;
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.pressed {
+                background: var(--txt);
+                color: var(--back);
+            }
+        }
+    }
+}

@@ -1,43 +1,42 @@
 main {
-    display: grid;
+    display: flex;
     width: 100%;
     height: 100%;
-}
 
-.grid-main {
-    display: grid;
+    flex-direction: column;
     gap: 5px;
     padding: 3px;
 
-    grid-template-areas:
-        "leftPanel  mainPanel  mainPanel     mainPanel     networkPanel"
-        "leftPanel  mainPanel  mainPanel     mainPanel     networkPanel"
-        "filesPanel filesPanel keyboardPanel keyboardPanel keyboardPanel";
+    .panel-row {
+        display: flex;
+        gap: 5px;
+    }
+
+    .panel {
+        color: white;
+        border-radius: 5px;
+        padding: 5px;
+        border: 2px solid var(--txt);
+        height: 100%;
+    }
 }
 
-.panel {
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    border: 2px solid var(--txt);
+#leftPanel {
+    width: 20%;
 }
 
-.leftPanel {
-    grid-area: leftPanel;
+#mainPanel {
+    width: 60%;
 }
 
-.filesPanel {
-    grid-area: filesPanel;
+#networkPanel {
+    width: 20%;
 }
 
-.mainPanel {
-    grid-area: mainPanel;
+#filesPanel {
+    width: 50%;
 }
 
-.networkPanel {
-    grid-area: networkPanel;
-}
-
-.keyboardPanel {
-    grid-area: keyboardPanel;
+#keyboardPanel {
+    width: 50%;
 }

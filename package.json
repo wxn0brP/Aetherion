@@ -16,11 +16,11 @@
         "start": "bun run src/server/index.ts"
     },
     "dependencies": {
-        "@wxn0brp/db-core": "^0.2.5",
-        "@wxn0brp/falcon-frame": "^0.5.3",
-        "@wxn0brp/flanker-ui": "^0.4.3",
-        "@wxn0brp/vql": "^0.8.3",
-        "@wxn0brp/vql-client": "^0.2.2"
+        "@wxn0brp/db-core": "^0.4.0",
+        "@wxn0brp/falcon-frame": "^0.6.1",
+        "@wxn0brp/flanker-ui": "^0.5.1",
+        "@wxn0brp/vql": "^0.10.2",
+        "@wxn0brp/vql-client": "^0.2.7"
     },
     "devDependencies": {
         "@wxn0brp/zhiva-base-lib": "github:wxn0brP/Zhiva-base-lib",

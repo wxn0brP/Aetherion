@@ -1,0 +1,41 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - master
+
+  workflow_dispatch:
+
+concurrency:
+  group: build-front
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: oven-sh/setup-bun@v2
+      - run: bun install --force
+
+      - name: Build
+        run: |
+          bun run build
+          bun run compile:terminal
+
+      - name: Prepare files
+        run: |
+          mkdir publish
+          cp -r dist publish/dist
+          cp -r src publish/src
+          cp zhiva.json publish
+          cp package.json publish
+          cp LICENSE publish
+
+      - name: Upload to dist
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./publish
+          publish_branch: dist

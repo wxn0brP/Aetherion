@@ -3,6 +3,7 @@
     "win_icon": "default",
     "name": "Aetherion",
     "description": "Future startup UI",
+    "branch": "dist",
     "version": "0.0.1",
     "author": "wxn0brP"
 }

@@ -29,6 +29,7 @@ jobs:
           mkdir publish
           cp -r dist publish/dist
           cp -r src publish/src
+          cp -r public publish/public
           cp zhiva.json publish
           cp package.json publish
           cp LICENSE publish

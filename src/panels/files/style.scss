@@ -1,0 +1,11 @@
+#filesPanel {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+
+    font-size: 10px;
+    overflow: scroll;
+
+    div {
+        cursor: pointer;
+    }
+}

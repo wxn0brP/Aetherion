@@ -1,0 +1,38 @@
+{
+    "name": "aetherion",
+    "version": "0.0.1",
+    "main": "src/server/index.ts",
+    "description": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wxn0brP/Aetherion.git"
+    },
+    "homepage": "https://github.com/wxn0brP/Aetherion",
+    "author": "wxn0brP",
+    "license": "MIT",
+    "type": "module",
+    "scripts": {
+        "build": "bun run build.ts",
+        "compile:terminal": "bun build ./src/server/terminal.ts --outfile dist/terminal.js --no-bundle",
+        "start": "bun run src/server/index.ts"
+    },
+    "dependencies": {
+        "@wxn0brp/db-core": "^0.4.0",
+        "@wxn0brp/falcon-frame": "^0.7.0",
+        "@wxn0brp/vql": "^0.10.4",
+        "node-pty": "^1.1.0",
+        "ws": "^8.19.0"
+    },
+    "devDependencies": {
+        "@wxn0brp/flanker-ui": "^0.5.1",
+        "@wxn0brp/vql-client": "^0.2.8",
+        "@wxn0brp/zhiva-base-lib": "github:wxn0brP/Zhiva-base-lib",
+        "esbuild": "*",
+        "esbuild-style-plugin": "*",
+        "sass": "*",
+        "typescript": "*"
+    },
+    "files": [
+        "dist"
+    ]
+}

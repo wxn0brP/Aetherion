@@ -12,7 +12,7 @@
     "license": "MIT",
     "type": "module",
     "scripts": {
-        "build": "bun run build.ts",
+        "build:front": "bun run build.ts",
         "compile:terminal": "bun build ./src/server/terminal.ts --outfile dist/terminal.js --no-bundle",
         "start": "bun run src/server/index.ts"
     },

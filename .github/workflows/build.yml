@@ -21,7 +21,7 @@ jobs:
 
       - name: Build
         run: |
-          bun run build
+          bun run build:front
           bun run compile:terminal
 
       - name: Prepare files

@@ -30,6 +30,7 @@
         "esbuild": "*",
         "esbuild-style-plugin": "*",
         "sass": "*",
-        "typescript": "*"
+        "typescript": "*",
+        "xterm": "^5.3.0"
     }
 }

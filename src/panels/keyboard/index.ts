@@ -58,17 +58,19 @@ function addKeyWidth(count: number, ...indexes: number[]) {
     getKeyDiv(...indexes).style.width = (100 + count) + "%";
 }
 
-document.addEventListener("keydown", (e) => {
+export function keydown(e: KeyboardEvent) {
     const key = mapKey(e.key.toLowerCase());
-    console.log(key);
     specialKeys(key);
     togglePressed(key, true);
-});
+}
 
-document.addEventListener("keyup", (e) => {
+export function keyup(e: KeyboardEvent) {
     const key = mapKey(e.key.toLowerCase());
     togglePressed(key, false);
-});
+}
+
+document.addEventListener("keydown", (e) => keydown(e));
+document.addEventListener("keyup", (e) => keyup(e));
 
 function togglePressed(key: string, press: boolean) {
     panel.querySelectorAll(".row div").forEach(div => {

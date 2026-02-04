@@ -4,5 +4,11 @@
         watch: [
             "src/server"
         ],
+    },
+    {
+        cmd: "bun run compile:terminal",
+        watch: [
+            "src/server/terminal.ts"
+        ],
     }
 ]

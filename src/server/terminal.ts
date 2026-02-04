@@ -6,13 +6,12 @@ if (!process.argv0.includes("node")) {
     process.exit(1);
 }
 
-const port = +process.env.ATO_TERMINAL_PORT;
-if (!port || isNaN(port)) process.exit(1);
-
 const authKey = process.env.ATO_TERMINAL_AUTH_KEY;
 if (!authKey) process.exit(1);
 
-const wss = new WebSocketServer({ port });
+const wss = new WebSocketServer({ port: 0 });
+
+console.log(`Terminal server started on port :::${wss.address().port}`);
 
 let used = false;
 let authed = false;
@@ -20,6 +19,7 @@ let authed = false;
 wss.on("connection", (ws) => {
     if (used) {
         ws.close();
+        console.error("Already used");
         process.exit(2);
         return;
     }
@@ -41,10 +41,9 @@ wss.on("connection", (ws) => {
 
     ws.on("message", (msg) => {
         if (!authed) {
-            if (msg !== authKey) {
+            if (msg.toString() !== authKey) {
                 ws.close();
                 process.exit(2);
-                return;
             }
             authed = true;
             return;
@@ -56,5 +55,14 @@ wss.on("connection", (ws) => {
 
     ws.on("close", () => {
         ptyProcess.kill();
+        wss.close();
+        console.log("Closed");
+        process.exit(0);
+    });
+
+    ptyProcess.onExit(() => {
+        ws.close();
+        console.log("Exited");
+        process.exit(0);
     });
 });

@@ -12,6 +12,8 @@
         "skipLibCheck": true,
         "outDir": "./dist",
         "declaration": true,
+        "strict": false,
+        "rootDir": "./src",
         "types": [
             "esbuild-style-plugin"
         ]

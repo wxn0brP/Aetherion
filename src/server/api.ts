@@ -9,8 +9,9 @@ import { randomBytes } from "crypto";
 const adapter = new AdapterBuilder();
 
 adapter.find("startup-logs", async () => startupLogs);
-adapter.find("list-files", async (search) => {
-    const entries = await fs.promises.readdir(search.path, { withFileTypes: true });
+adapter.find("list-files", async ({ search }) => {
+    const path = (search as any).path;
+    const entries = await fs.promises.readdir(path, { withFileTypes: true });
     return entries.map(f => ({ name: f.name, d: f.isDirectory() }));
 });
 

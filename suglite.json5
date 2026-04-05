@@ -5,9 +5,5 @@
     ],
     ignore: [
         "src/server"
-    ],
-    restart_cmd: "clear",
-    events: {
-        rs: "clear"
-    }
+    ]
 }

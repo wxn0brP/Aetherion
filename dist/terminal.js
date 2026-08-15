@@ -7,7 +7,9 @@ if (!process.argv0.includes("node")) {
 const authKey = process.env.ATO_TERMINAL_AUTH_KEY;
 if (!authKey)
   process.exit(1);
-const wss = new WebSocketServer({ port: 0 });
+const wss = new WebSocketServer({
+  port: 0
+});
 console.log(`Terminal server started on port :::${wss.address().port}`);
 let used = false;
 let authed = false;
@@ -20,7 +22,9 @@ wss.on("connection", (ws) => {
   }
   used = true;
   const shell = process.platform === "win32" ? "powershell.exe" : process.env.SHELL || "bash";
-  const ptyProcess = spawn(shell, ["--login"], {
+  const ptyProcess = spawn(shell, [
+    "--login"
+  ], {
     name: "xterm-color",
     cols: 80,
     rows: 24,

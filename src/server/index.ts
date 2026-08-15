@@ -8,5 +8,5 @@ app.static("dist");
 FF_VQL(app, VQL);
 
 if (process.env.NO_ZHIVA !== "true") {
-    oneWindow();
+	oneWindow();
 }

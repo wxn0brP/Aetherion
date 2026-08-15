@@ -1,7 +1,5 @@
 import { delay } from "@wxn0brp/flanker-ui/utils";
 
-export { }
-
 const hiDiv = qs("#startup-hi");
 
 hiDiv.css("display", "");

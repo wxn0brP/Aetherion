@@ -10,7 +10,7 @@ export async function init() {
 		cursorBlink: true,
 		cursorStyle: "block",
 		scrollback: 10000,
-		rows: 30,
+		rows: 27,
 		cols: 80,
 		theme: {
 			background: "#000000",

@@ -1,6 +1,6 @@
 [
     {
-        cmd: "NO_ZHIVA=true ZHIVA_PORT=11295 bun run src/server/index.js",
+        cmd: "bun run src/server/index.ts",
         watch: [
             "src/server"
         ],

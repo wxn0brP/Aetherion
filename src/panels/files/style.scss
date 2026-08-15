@@ -1,11 +1,24 @@
 #filesPanel {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto;
 
     font-size: 10px;
     overflow: scroll;
 
     div {
         cursor: pointer;
+    }
+
+    .entry {
+        display: flex;
+        align-items: center;
+
+        img {
+            --px: 28px;
+            width: var(--px);
+            height: var(--px);
+            object-fit: cover;
+            margin-right: 5px;
+        }
     }
 }

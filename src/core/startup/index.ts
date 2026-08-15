@@ -4,5 +4,3 @@ import "./style.scss";
 await delay(500);
 await import("./log");
 await import("./hi");
-
-export { }
